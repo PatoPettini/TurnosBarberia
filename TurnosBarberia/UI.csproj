@@ -81,7 +81,7 @@
     <Content Include="Global.asax" />
     <Content Include="LogIn.aspx" />
     <Content Include="MiPerfil.aspx" />
-    <Content Include="RecuperarContraseña.aspx" />
+    <Content Include="RecuperarContrasena.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="ReservarTurno.aspx" />
     <Content Include="Turnos.aspx" />
@@ -127,12 +127,12 @@
       <DependentUpon>MiPerfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecuperarContraseña.aspx.cs">
-      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+    <Compile Include="RecuperarContrasena.aspx.cs">
+      <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RecuperarContraseña.aspx.designer.cs">
-      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+    <Compile Include="RecuperarContrasena.aspx.designer.cs">
+      <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>

@@ -48,7 +48,7 @@
         </div>
         <asp:Button ID="btnIngresar" OnClick="btnIngresar_Click" OnClientClick="return validar()" CssClass="btn btn-primary" runat="server" Text="Ingresar" />
         <div>
-            <a href="RecuperarContraseña.aspx">He olvidado mi contraseña</a>
+            <a href="RecuperarContrasena.aspx">He olvidado mi contraseña</a>
         </div>
     </div>
 </asp:Content>

@@ -37,6 +37,7 @@ namespace TurnosBarberia
                 Envio_Email servicio = new Envio_Email();
                 servicio.ArmarCorreo(cliente.Email, "Registro", "<h1>Hola " + cliente.Nombre + "!</h1> <br>Tu registro fue exitoso, te damos la bienvenida a la comunidad.");
                 servicio.EnviarEmail();
+                Response.Redirect("ReservarTurno.aspx");
             }
             catch (Exception ex)
             {

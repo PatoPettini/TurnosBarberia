@@ -3,10 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <img src="https://i.imgur.com/sDzMr15.png" alt="Precios" width="350px" />
-    <img src="https://i.imgur.com/fIi1UlF.png" alt="Horarios" height="350px" width="300px" />
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
+            <img src="https://i.imgur.com/t5LxG36.jpeg" alt="Precios" width="350px" height="400px" />
+        </div>
+        <div class="col-md-4">
             <%if (Business.Validaciones.EsAdmin((Entity.ClientesEntity)Session["cliente"]))
                 { %>
             <div class="mb-3">
@@ -25,6 +26,7 @@
             <div class="mb-3">
                 <label for="txtDia" class="form-label">Dia:</label>
                 <asp:TextBox ID="txtDia" OnTextChanged="txtDia_TextChanged" AutoPostBack="true" TextMode="Date" CssClass="form-control" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ErrorMessage="Debe completar este campo" ControlToValidate="txtDia" runat="server" />
                 <asp:Label ID="lblDia" runat="server" Text=""></asp:Label>
             </div>
             <div class="mb-3">
@@ -33,6 +35,9 @@
             </div>
             <asp:Button ID="btnReservar" OnClick="btnReservar_Click" CssClass="btn btn-primary" runat="server" Text="Reservar" />
             <asp:Button ID="btnEliminar" OnClick="btnEliminar_Click" CssClass="btn btn-primary" runat="server" Text="Eliminar" />
+        </div>
+        <div class="col-md-4">
+            <img src="https://i.imgur.com/Lnufngg.jpeg" alt="Horarios" height="400px" width="300px" />
         </div>
     </div>
 </asp:Content>

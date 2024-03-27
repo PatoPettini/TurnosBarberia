@@ -70,6 +70,7 @@ namespace TurnosBarberia
                 BarberosEntity barbero = new BarberosEntity();
                 barbero.Id = Convert.ToInt32(id);
                 barberoBusiness.EliminarBarbero(barbero);
+                Response.Redirect("Barberos.aspx", false);
             }
             catch (Exception ex)
             {

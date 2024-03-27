@@ -56,6 +56,7 @@ namespace Business
             lista.Add(TimeSpan.Parse("18:00"));
             lista.Add(TimeSpan.Parse("18:40"));
             lista.Add(TimeSpan.Parse("19:20"));
+            lista.Add(TimeSpan.Parse("20:00"));
             List<TimeSpan> nl = new List<TimeSpan>();
 
             if (Convert.ToDateTime(dia) == DateTime.Today)
@@ -76,9 +77,9 @@ namespace Business
                 }
             }
 
-            if (diadelasemana == 5 || diadelasemana == 6)
+            if (diadelasemana == 6)
             {
-                lista.Add(TimeSpan.Parse("20:00"));
+                lista.Remove(TimeSpan.Parse("20:00"));
             }
             List<TimeSpan> listaNueva = new List<TimeSpan>();
             foreach (TurnosEntity turno in GetTurno())
@@ -87,7 +88,7 @@ namespace Business
                 {
                     if (turno.Barbero.Nombre == barbero)
                     {
-                        foreach (TimeSpan hora in nl)
+                        foreach (TimeSpan hora in lista)
                         {
                             if (turno.Hora == hora) listaNueva.Add(hora);
                         }
