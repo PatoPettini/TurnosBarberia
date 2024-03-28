@@ -77,7 +77,6 @@
     <Content Include="ABMBarbero.aspx" />
     <Content Include="Barberos.aspx" />
     <Content Include="Error.aspx" />
-    <Content Include="estilos.css" />
     <Content Include="Global.asax" />
     <Content Include="LogIn.aspx" />
     <Content Include="MiPerfil.aspx" />
