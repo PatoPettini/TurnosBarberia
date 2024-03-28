@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="container m-3">
     <div class="row">
         <div class="col-md-4">
             <img src="https://i.imgur.com/t5LxG36.jpeg" alt="Precios" width="350px" height="400px" />
@@ -14,7 +15,8 @@
                 <label for="txtNombre" class="form-label">Nombre del cliente:</label>
                 <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
-            <%}%>
+            <%}
+%>
             <div class="mb-3">
                 <label for="ddlBarbero" class="form-label">Barbero:</label>
                 <asp:DropDownList ID="ddlBarbero" AutoPostBack="true" OnSelectedIndexChanged="ddlBarbero_SelectedIndexChanged" CssClass="form-control" runat="server"></asp:DropDownList>
@@ -40,4 +42,5 @@
             <img src="https://i.imgur.com/Lnufngg.jpeg" alt="Horarios" height="400px" width="300px" />
         </div>
     </div>
+</div>
 </asp:Content>
