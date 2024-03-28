@@ -3,15 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container m-3">
     <div class="row">
-        <div class="col-md-4">
-            <img src="https://i.imgur.com/t5LxG36.jpeg" alt="Precios" width="350px" height="400px" />
+        <div class="col-md-4 d-flex justify-content-center align-items-center" style="margin-top:10%;padding-bottom:10%">
+            <img src="https://i.imgur.com/t5LxG36.jpeg" alt="Precios" width="350px" height="400px">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" style="margin-top:10%;padding-bottom:10%">
             <%if (Business.Validaciones.EsAdmin((Entity.ClientesEntity)Session["cliente"]))
                 { %>
-            <div class="mb-3">
+            <div class="mb-3" >
                 <label for="txtNombre" class="form-label">Nombre del cliente:</label>
                 <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
@@ -38,9 +37,8 @@
             <asp:Button ID="btnReservar" OnClick="btnReservar_Click" CssClass="btn btn-primary" runat="server" Text="Reservar" />
             <asp:Button ID="btnEliminar" OnClick="btnEliminar_Click" CssClass="btn btn-primary" runat="server" Text="Eliminar" />
         </div>
-        <div class="col-md-4">
-            <img src="https://i.imgur.com/Lnufngg.jpeg" alt="Horarios" height="400px" width="300px" />
+        <div class="col-md-4 d-flex justify-content-center align-items-center" style="margin-top:10%;padding-bottom:10%">
+            <img src="https://i.imgur.com/Lnufngg.jpeg" alt="Horarios" height="400px" width="300px">
         </div>
     </div>
-</div>
 </asp:Content>

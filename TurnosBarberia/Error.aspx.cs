@@ -12,6 +12,9 @@ namespace TurnosBarberia
         protected void Page_Load(object sender, EventArgs e)
         {
             Label1.Text = Session["error"].ToString();
+
+            if(Label1.Text.Contains("log"))  btnLoguearse.Visible= true;
+            else btnLoguearse.Visible= false;
         }
     }
 }

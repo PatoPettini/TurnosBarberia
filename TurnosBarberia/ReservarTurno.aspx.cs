@@ -78,8 +78,10 @@ namespace TurnosBarberia
         {
             try
             {
-                Page.Validate();
-                if (!Page.IsValid) return;
+                if ((Validaciones.EsAdmin((ClientesEntity)Session["cliente"])))
+                {
+                    if (txtNombre.Text == "") throw new Exception("Debe completar el campo nombre");
+                }
 
                 ClientesEntity cliente = (ClientesEntity)Session["cliente"];
                 TurnosEntity turno = new TurnosEntity();

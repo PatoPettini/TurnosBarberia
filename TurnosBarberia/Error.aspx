@@ -4,4 +4,5 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Ha ocurrido algo!</h1>
     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+    <a id="btnLoguearse" runat="server" class="btn btn-secondary" href="Login.aspx">Loguearse</a>
 </asp:Content>
