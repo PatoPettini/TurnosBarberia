@@ -67,20 +67,20 @@
         </div>
         <%} %>
         <div class="row">
-                    <asp:GridView runat="server" ID="dgvTurnos" DataKeyNames="id" CssClass="table table-dark table-bordered" OnPageIndexChanging="dgvTurnos_PageIndexChanging"
-                        AllowPaging="true" OnSelectedIndexChanged="dgvTurnos_SelectedIndexChanged" PageSize="2" AutoGenerateColumns="false">
-                        <Columns>
-                            <asp:BoundField HeaderText="Barbero" DataField="Barbero.Nombre" />
-                            <asp:BoundField HeaderText="Cliente" DataField="Cliente.Nombre" />
-                            <asp:BoundField HeaderText="Servicio" DataField="Servicio.Servicio" />
-                            <asp:BoundField HeaderText="Dia" DataField="Dia" DataFormatString="{0:dd/MM/yy}" />
-                            <asp:BoundField HeaderText="Hora" DataField="Hora" DataFormatString="{0:hh\:mm}" />
-                            <asp:BoundField HeaderText="Precio" DataField="Servicio.Precio" DataFormatString="{0:$#####}" />
-                            <asp:CommandField ShowSelectButton="true" SelectText="Seleccionar" HeaderText="Accion" />
-                        </Columns>
-                    </asp:GridView>
-                    <asp:Label ID="lblCantidad" runat="server" Text=""></asp:Label>
-                    <a href="ReservarTurno.aspx">Agregar Turno</a>
+            <asp:GridView runat="server" ID="dgvTurnos" DataKeyNames="id" CssClass="table table-dark table-bordered" OnPageIndexChanging="dgvTurnos_PageIndexChanging"
+                AllowPaging="true" OnSelectedIndexChanged="dgvTurnos_SelectedIndexChanged" PageSize="15" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField HeaderText="Barbero" DataField="Barbero.Nombre" />
+                    <asp:BoundField HeaderText="Cliente" DataField="Cliente.Nombre" />
+                    <asp:BoundField HeaderText="Servicio" DataField="Servicio.Servicio" />
+                    <asp:BoundField HeaderText="Dia" DataField="Dia" DataFormatString="{0:dd/MM/yy}" />
+                    <asp:BoundField HeaderText="Hora" DataField="Hora" DataFormatString="{0:hh\:mm}" />
+                    <asp:BoundField HeaderText="Precio" DataField="Servicio.Precio" DataFormatString="{0:$#####}" />
+                    <asp:CommandField ShowSelectButton="true" SelectText="Seleccionar" HeaderText="Accion" />
+                </Columns>
+            </asp:GridView>
+            <asp:Label ID="lblCantidad" runat="server" Text=""></asp:Label>
+            <a href="ReservarTurno.aspx">Agregar Turno</a>
         </div>
     </div>
 </asp:Content>
