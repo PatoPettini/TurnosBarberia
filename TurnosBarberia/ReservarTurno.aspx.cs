@@ -130,7 +130,7 @@ namespace TurnosBarberia
                 TurnosEntity turno = new TurnosEntity();
                 var id = Request.QueryString["id"];
                 turno.Id = Convert.ToInt32(id);
-                turnosBusiness.EliminarTurno(turno); 
+                turnosBusiness.EliminarTurno(turno);
                 Response.Redirect("turnos.aspx", false);
             }
             catch (Exception ex)
@@ -163,9 +163,7 @@ namespace TurnosBarberia
                     else
                     {
                         int diadelasemana = Convert.ToInt32(Convert.ToDateTime(txtDia.Text).DayOfWeek);
-                        var a = Convert.ToDateTime(txtDia.Text);
-                        var b = Convert.ToDateTime("01/04/2024");
-                        if (Convert.ToDateTime(txtDia.Text) == Convert.ToDateTime("01/04/2024"))
+                        if (Convert.ToDateTime(txtDia.Text) == Convert.ToDateTime("04/01/2024"))
                         {
                             lblDia.Text = "Cerrado por remodelacion";
                             labelHora.Visible = false;

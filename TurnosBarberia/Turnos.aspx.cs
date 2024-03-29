@@ -27,10 +27,9 @@ namespace TurnosBarberia
                         Session.Add("error", "debe loguearse para entrar aca");
                         Response.Redirect("error.aspx");
                     }
-                    if (Validaciones.EsAdmin(cliente))
+                    else if (Validaciones.EsAdmin(cliente))
                     {
-                        dgvTurnos.DataSource = turnosBusiness.GetTurno();
-                        dgvTurnos.DataBind();
+                        Session.Add("turnos", turnosBusiness.GetTurno());
                         ddlBarbero.DataSource = barberoBusiness.GetBarbero();
                         ddlBarbero.DataTextField = "nombre";
                         ddlBarbero.DataValueField = "id";
@@ -45,8 +44,7 @@ namespace TurnosBarberia
                     else
                     {
                         List<TurnosEntity> lista = turnosBusiness.GetTurno().FindAll(t => t.IdCliente == cliente.Id);
-                        dgvTurnos.DataSource = lista;
-                        dgvTurnos.DataBind();
+                        Session.Add("turnos", lista);
                     }
                 }
                 if (chkFiltroAvanzado.Checked)
@@ -55,6 +53,9 @@ namespace TurnosBarberia
                     txtFiltrarPorCliente.Enabled = false;
                 }
                 else txtFiltrarPorCliente.Enabled = true;
+                dgvTurnos.DataSource = Session["turnos"];
+                dgvTurnos.DataBind();
+
             }
             catch (System.Threading.ThreadAbortException) { }
             catch (Exception ex)
@@ -135,6 +136,12 @@ namespace TurnosBarberia
                 ddlMes.Text = "Cualquiera";
             }
             else ddlMes.Enabled = true;
+        }
+
+        protected void dgvTurnos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            dgvTurnos.PageIndex = e.NewPageIndex;
+            dgvTurnos.DataBind();
         }
     }
 }
